@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Prathamesh Readymade and Hosiery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar - Copy from previous pages -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Prathamesh Readymade</a>
+            
+            <!-- Hamburger Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    
+                    <!-- Dropdown for Categories -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="products.html">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="products.html">Socks</a></li>
+                            <li><a class="dropdown-item" href="products.html">Caps</a></li>
+                            <li><a class="dropdown-item" href="products.html">Inner Wear</a></li>
+                            <li><a class="dropdown-item" href="products.html">Leather Products</a></li>
+                            <li><a class="dropdown-item" href="products.html">Bags</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Arrivals</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Form -->
+                <form class="d-flex mx-auto mb-2 mb-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- User Actions (Login, Wishlist, Cart) -->
+                <div class="user-actions d-flex align-items-center ms-lg-3">
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-user" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            2
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fw-bold">Shopping Cart</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Cart Items (2)</h5>
+                        
+                        <!-- Cart Item 1 -->
+                        <div class="row mb-4 pb-3 border-bottom">
+                            <div class="col-md-2 col-4">
+                                <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image">
+                            </div>
+                            <div class="col-md-5 col-8">
+                                <h6 class="product-title">
+                                    <a href="product-detail.html" class="text-dark text-decoration-none">Cotton Kids T-shirt</a>
+                                </h6>
+                                <p class="mb-1 text-muted small">Category: Kids Clothing</p>
+                                <p class="mb-1 text-muted small">Size: M | Color: Blue</p>
+                                <div class="d-flex mt-2">
+                                    <button class="btn btn-sm btn-link text-danger p-0 me-3 remove-item" data-item-id="1">
+                                        <i class="fas fa-trash-alt me-1"></i> Remove
+                                    </button>
+                                    <button class="btn btn-sm btn-link text-dark p-0 save-for-later" data-item-id="1">
+                                        <i class="far fa-heart me-1"></i> Save for Later
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                <div class="input-group input-group-sm mb-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary decrease-quantity" type="button" data-item-id="1">-</button>
+                                    <input type="text" class="form-control text-center quantity-input" value="2" data-item-id="1">
+                                    <button class="btn btn-outline-secondary increase-quantity" type="button" data-item-id="1">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6 mt-3 mt-md-0 text-end">
+                                <p class="fw-bold mb-0">₹798</p>
+                                <p class="text-muted small mb-0"><span class="text-decoration-line-through">₹998</span> (20% OFF)</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Cart Item 2 -->
+                        <div class="row">
+                            <div class="col-md-2 col-4">
+                                <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Product Image">
+                            </div>
+                            <div class="col-md-5 col-8">
+                                <h6 class="product-title">
+                                    <a href="product-detail.html" class="text-dark text-decoration-none">Leather Belt for Men</a>
+                                </h6>
+                                <p class="mb-1 text-muted small">Category: Leather Products</p>
+                                <p class="mb-1 text-muted small">Size: 32 | Color: Brown</p>
+                                <div class="d-flex mt-2">
+                                    <button class="btn btn-sm btn-link text-danger p-0 me-3 remove-item" data-item-id="2">
+                                        <i class="fas fa-trash-alt me-1"></i> Remove
+                                    </button>
+                                    <button class="btn btn-sm btn-link text-dark p-0 save-for-later" data-item-id="2">
+                                        <i class="far fa-heart me-1"></i> Save for Later
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6 mt-3 mt-md-0">
+                                <div class="input-group input-group-sm mb-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary decrease-quantity" type="button" data-item-id="2">-</button>
+                                    <input type="text" class="form-control text-center quantity-input" value="1" data-item-id="2">
+                                    <button class="btn btn-outline-secondary increase-quantity" type="button" data-item-id="2">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-6 mt-3 mt-md-0 text-end">
+                                <p class="fw-bold mb-0">₹699</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Continue Shopping & Clear Cart Buttons -->
+                <div class="d-flex justify-content-between mb-4">
+                    <a href="products.html" class="btn btn-outline-dark">
+                        <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                    </a>
+                    <button class="btn btn-outline-danger" id="clear-cart">
+                        <i class="fas fa-trash-alt me-2"></i>Clear Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Order Summary</h5>
+                        
+                        <!-- Price Details -->
+                        <div class="price-details">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal (3 items)</span>
+                                <span>₹1,497</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Discount</span>
+                                <span class="text-success">-₹200</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Delivery Charges</span>
+                                <span class="text-success">FREE</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-2 fw-bold">
+                                <span>Total Amount</span>
+                                <span>₹1,297</span>
+                            </div>
+                            <p class="text-success small mb-0">You saved ₹200 on this order</p>
+                        </div>
+                        
+                        <!-- Coupon Code -->
+                        <div class="mt-4 mb-3">
+                            <label for="coupon" class="form-label">Apply Coupon</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="coupon" placeholder="Enter coupon code">
+                                <button class="btn btn-outline-dark" type="button" id="apply-coupon">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Checkout Button -->
+                        <a href="checkout.html" class="btn btn-dark w-100 mt-2">
+                            Proceed to Checkout
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Payment Methods -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h6 class="mb-3">We Accept</h6>
+                        <div class="d-flex justify-content-between">
+                            <img src="https://via.placeholder.com/50x20" alt="Visa" class="payment-icon">
+                            <img src="https://via.placeholder.com/50x20" alt="Mastercard" class="payment-icon">
+                            <img src="https://via.placeholder.com/50x20" alt="PayPal" class="payment-icon">
+                            <img src="https://via.placeholder.com/50x20" alt="UPI" class="payment-icon">
+                            <img src="https://via.placeholder.com/50x20" alt="COD" class="payment-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer - Copy from previous pages -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Prathamesh Readymade</h5>
+                    <p>Your one-stop solution for quality clothing and accessories for the entire family.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Kids Clothing</a></li>
+                        <li><a href="#" class="text-white">Mens Wear</a></li>
+                        <li><a href="#" class="text-white">Ladies Wear</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, City, State, India</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@prathameshreadymade.com</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Prathamesh Readymade and Hosiery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember-me">
+                            <label class="form-check-label" for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Create an Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="register-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="register-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="register-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="register-phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="register-password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="register-confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Service -->
+    <script src="js/api/apiService.js"></script>
+    <!-- Auth Service -->
+    <script src="js/auth.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/scripts.js"></script>
+    
+    <!-- Cart JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Quantity buttons
+            const decreaseButtons = document.querySelectorAll('.decrease-quantity');
+            const increaseButtons = document.querySelectorAll('.increase-quantity');
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            
+            // Decrease quantity
+            decreaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.dataset.itemId;
+                    const input = document.querySelector(`.quantity-input[data-item-id="${itemId}"]`);
+                    let value = parseInt(input.value);
+                    if (value > 1) {
+                        input.value = value - 1;
+                        updateTotals();
+                    }
+                });
+            });
+            
+            // Increase quantity
+            increaseButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.dataset.itemId;
+                    const input = document.querySelector(`.quantity-input[data-item-id="${itemId}"]`);
+                    let value = parseInt(input.value);
+                    input.value = value + 1;
+                    updateTotals();
+                });
+            });
+            
+            // Remove item
+            const removeButtons = document.querySelectorAll('.remove-item');
+            
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.dataset.itemId;
+                    const item = this.closest('.row');
+                    
+                    if (confirm('Are you sure you want to remove this item?')) {
+                        item.remove();
+                        updateCartCount(-1);
+                        updateTotals();
+                        
+                        // Check if cart is empty
+                        const cartItems = document.querySelectorAll('.card-body .row');
+                        if (cartItems.length === 0) {
+                            showEmptyCart();
+                        }
+                    }
+                });
+            });
+            
+            // Save for later
+            const saveButtons = document.querySelectorAll('.save-for-later');
+            
+            saveButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.dataset.itemId;
+                    const heartIcon = this.querySelector('i');
+                    
+                    heartIcon.classList.toggle('far');
+                    heartIcon.classList.toggle('fas');
+                    
+                    if (heartIcon.classList.contains('fas')) {
+                        this.classList.add('text-danger');
+                        updateWishlistCount(1);
+                        alert('Item saved to wishlist!');
+                    } else {
+                        this.classList.remove('text-danger');
+                        updateWishlistCount(-1);
+                    }
+                });
+            });
+            
+            // Clear cart
+            const clearCartButton = document.getElementById('clear-cart');
+            
+            clearCartButton.addEventListener('click', function() {
+                if (confirm('Are you sure you want to clear your cart?')) {
+                    const cartItems = document.querySelectorAll('.card-body .row');
+                    cartItems.forEach(item => item.remove());
+                    
+                    updateCartCount(-parseInt(document.querySelector('.fa-shopping-cart + .badge').textContent));
+                    showEmptyCart();
+                }
+            });
+            
+            // Apply coupon
+            const applyCouponButton = document.getElementById('apply-coupon');
+            
+            applyCouponButton.addEventListener('click', function() {
+                const couponCode = document.getElementById('coupon').value.trim().toUpperCase();
+                
+                if (couponCode === '') {
+                    alert('Please enter a coupon code.');
+                    return;
+                }
+                
+                if (couponCode === 'FIRST10') {
+                    alert('Coupon applied successfully! You got 10% off.');
+                    updateTotals(10);
+                } else {
+                    alert('Invalid coupon code. Please try again.');
+                }
+            });
+            
+            // Helper functions
+            function updateCartCount(change) {
+                const cartBadge = document.querySelector('.fa-shopping-cart + .badge');
+                let count = parseInt(cartBadge.textContent) + change;
+                count = count < 0 ? 0 : count;
+                cartBadge.textContent = count;
+            }
+            
+            function updateWishlistCount(change) {
+                const wishlistBadge = document.querySelector('.fa-heart + .badge');
+                let count = parseInt(wishlistBadge.textContent) + change;
+                count = count < 0 ? 0 : count;
+                wishlistBadge.textContent = count;
+            }
+            
+            function updateTotals(discountPercent = 0) {
+                // For demo purposes - in a real app, this would recalculate based on actual items
+                let subtotal = 1497;  // Fixed for demo
+                let discount = 200;   // Fixed for demo
+                
+                if (discountPercent > 0) {
+                    discount += (subtotal * discountPercent / 100);
+                }
+                
+                const total = subtotal - discount;
+                
+                // Update the displayed values
+                document.querySelector('.price-details .d-flex:nth-child(2) span:last-child').textContent = `-₹${discount}`;
+                document.querySelector('.price-details .fw-bold span:last-child').textContent = `₹${total}`;
+                document.querySelector('.text-success.small').textContent = `You saved ₹${discount} on this order`;
+            }
+            
+            function showEmptyCart() {
+                const cartSection = document.querySelector('.col-lg-8 .card-body');
+                cartSection.innerHTML = `
+                    <div class="text-center py-5">
+                        <i class="fas fa-shopping-cart fa-4x text-muted mb-3"></i>
+                        <h4>Your cart is empty</h4>
+                        <p class="text-muted">Looks like you haven't added any items to your cart yet.</p>
+                        <a href="products.html" class="btn btn-primary mt-3">Start Shopping</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

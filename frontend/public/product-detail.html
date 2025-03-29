@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Prathamesh Readymade and Hosiery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar - Copy from previous pages -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Prathamesh Readymade</a>
+            
+            <!-- Hamburger Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    
+                    <!-- Dropdown for Categories -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="products.html">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="products.html">Socks</a></li>
+                            <li><a class="dropdown-item" href="products.html">Caps</a></li>
+                            <li><a class="dropdown-item" href="products.html">Inner Wear</a></li>
+                            <li><a class="dropdown-item" href="products.html">Leather Products</a></li>
+                            <li><a class="dropdown-item" href="products.html">Bags</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Arrivals</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Form -->
+                <form class="d-flex mx-auto mb-2 mb-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- User Actions (Login, Wishlist, Cart) -->
+                <div class="user-actions d-flex align-items-center ms-lg-3">
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-user" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block">
+                        <a href="cart.html" class="text-dark">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="products.html">Kids Clothing</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cotton Kids T-shirt</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="container my-5 product-detail">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6 mb-4">
+                <div class="product-images">
+                    <!-- Main Image -->
+                    <div class="main-image mb-3">
+                        <img src="https://via.placeholder.com/600x600" class="img-fluid rounded" alt="Product Image">
+                    </div>
+                    
+                    <!-- Thumbnail Images -->
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150x150" class="img-fluid rounded thumbnail active" alt="Thumbnail 1">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150x150" class="img-fluid rounded thumbnail" alt="Thumbnail 2">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150x150" class="img-fluid rounded thumbnail" alt="Thumbnail 3">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://via.placeholder.com/150x150" class="img-fluid rounded thumbnail" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <div class="product-info">
+                    <!-- Basic Info -->
+                    <span class="badge bg-danger mb-2">SALE</span>
+                    <h1 class="product-title mb-2">Cotton Kids T-shirt</h1>
+                    <div class="product-rating mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <span class="ms-2">4.5 (24 reviews)</span>
+                    </div>
+                    
+                    <!-- Price -->
+                    <div class="product-price mb-3">
+                        <span class="text-decoration-line-through text-muted me-2">₹499</span>
+                        <span class="fw-bold fs-4">₹399</span>
+                        <span class="text-success ms-2">(20% OFF)</span>
+                    </div>
+                    
+                    <!-- Short Description -->
+                    <p class="product-description mb-4">
+                        Premium quality cotton t-shirt for kids with comfortable fit and vibrant colors that last long. Perfect for daily wear and special occasions.
+                    </p>
+                    
+                    <!-- Size Selection -->
+                    <div class="size-selection mb-3">
+                        <h6 class="mb-2">Size:</h6>
+                        <div class="btn-group" role="group" aria-label="Size selection">
+                            <input type="radio" class="btn-check" name="size" id="size-xs" autocomplete="off">
+                            <label class="btn btn-outline-dark me-2" for="size-xs">XS</label>
+                            
+                            <input type="radio" class="btn-check" name="size" id="size-s" autocomplete="off">
+                            <label class="btn btn-outline-dark me-2" for="size-s">S</label>
+                            
+                            <input type="radio" class="btn-check" name="size" id="size-m" autocomplete="off" checked>
+                            <label class="btn btn-outline-dark me-2" for="size-m">M</label>
+                            
+                            <input type="radio" class="btn-check" name="size" id="size-l" autocomplete="off">
+                            <label class="btn btn-outline-dark me-2" for="size-l">L</label>
+                            
+                            <input type="radio" class="btn-check" name="size" id="size-xl" autocomplete="off">
+                            <label class="btn btn-outline-dark" for="size-xl">XL</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Color Selection -->
+                    <div class="color-selection mb-4">
+                        <h6 class="mb-2">Color:</h6>
+                        <div class="d-flex">
+                            <div class="color-option me-2 active" style="background-color: #3498db;"></div>
+                            <div class="color-option me-2" style="background-color: #e74c3c;"></div>
+                            <div class="color-option me-2" style="background-color: #2ecc71;"></div>
+                            <div class="color-option" style="background-color: #f39c12;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quantity -->
+                    <div class="quantity-selection mb-4">
+                        <h6 class="mb-2">Quantity:</h6>
+                        <div class="input-group" style="width: 130px;">
+                            <button class="btn btn-outline-dark" type="button" id="decrease-quantity">-</button>
+                            <input type="text" class="form-control text-center" value="1" id="quantity">
+                            <button class="btn btn-outline-dark" type="button" id="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Add to Cart & Wishlist -->
+                    <div class="action-buttons d-flex mb-4">
+                        <button class="btn btn-dark py-2 px-4 me-2 flex-grow-1" id="add-to-cart">
+                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                        </button>
+                        <button class="btn btn-outline-dark py-2 px-3" id="add-to-wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Additional Info -->
+                    <div class="additional-info">
+                        <p class="mb-1"><i class="fas fa-check-circle text-success me-2"></i> In stock (20 items)</p>
+                        <p class="mb-1"><i class="fas fa-truck me-2"></i> Free shipping on orders over ₹500</p>
+                        <p class="mb-1"><i class="fas fa-exchange-alt me-2"></i> 7-day return policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Details Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab" aria-controls="specifications" aria-selected="false">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (24)</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-4 border border-top-0 rounded-bottom" id="productTabsContent">
+                    <!-- Description Tab -->
+                    <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                        <h4>Product Description</h4>
+                        <p>This premium quality cotton t-shirt for kids is designed with comfort and style in mind. Made from 100% organic cotton, it's soft against your child's skin and perfect for everyday wear.</p>
+                        <p>The vibrant colors are long-lasting and won't fade even after multiple washes. The relaxed fit allows plenty of room for movement, making it ideal for active kids.</p>
+                        <h5>Features:</h5>
+                        <ul>
+                            <li>100% organic cotton material</li>
+                            <li>Comfortable round neck design</li>
+                            <li>Vibrant, fade-resistant colors</li>
+                            <li>Breathable fabric for all-day comfort</li>
+                            <li>Easy to wash and quick to dry</li>
+                            <li>Available in multiple sizes and colors</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Specifications Tab -->
+                    <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specifications-tab">
+                        <h4>Product Specifications</h4>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 30%;">Material</th>
+                                    <td>100% Organic Cotton</td>
+                                </tr>
+                                <tr>
+                                    <th>Pattern</th>
+                                    <td>Solid</td>
+                                </tr>
+                                <tr>
+                                    <th>Neck Type</th>
+                                    <td>Round Neck</td>
+                                </tr>
+                                <tr>
+                                    <th>Sleeve Type</th>
+                                    <td>Short Sleeve</td>
+                                </tr>
+                                <tr>
+                                    <th>Fit</th>
+                                    <td>Regular</td>
+                                </tr>
+                                <tr>
+                                    <th>Age Range</th>
+                                    <td>2-10 years</td>
+                                </tr>
+                                <tr>
+                                    <th>Wash Care</th>
+                                    <td>Machine wash cold, Tumble dry low</td>
+                                </tr>
+                                <tr>
+                                    <th>Country of Origin</th>
+                                    <td>India</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Reviews Tab -->
+                    <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h4>Customer Reviews</h4>
+                            <button class="btn btn-outline-dark">Write a Review</button>
+                        </div>
+                        
+                        <!-- Review Summary -->
+                        <div class="review-summary mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center mb-3 mb-md-0">
+                                    <div class="display-4 fw-bold">4.5</div>
+                                    <div class="mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                    <div>Based on 24 reviews</div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-3">5 stars</div>
+                                        <div class="col-7">
+                                            <div class="progress" style="height: 10px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">18</div>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-3">4 stars</div>
+                                        <div class="col-7">
+                                            <div class="progress" style="height: 10px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">4</div>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-3">3 stars</div>
+                                        <div class="col-7">
+                                            <div class="progress" style="height: 10px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 4%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">1</div>
+                                    </div>
+                                    <div class="row align-items-center mb-2">
+                                        <div class="col-3">2 stars</div>
+                                        <div class="col-7">
+                                            <div class="progress" style="height: 10px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 4%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">1</div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-3">1 star</div>
+                                        <div class="col-7">
+                                            <div class="progress" style="height: 10px;">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Individual Reviews -->
+                        <div class="reviews-list">
+                            <!-- Review 1 -->
+                            <div class="review-item border-bottom pb-4 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">Great quality t-shirt!</h5>
+                                    <div>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="text-muted mb-2">Ravi S. - <small>15 March, 2025</small></div>
+                                <p>The quality of this t-shirt is excellent. My son loves wearing it as it's very comfortable. The colors are bright and haven't faded even after multiple washes. Great purchase, would buy again!</p>
+                            </div>
+                            
+                            <!-- Review 2 -->
+                            <div class="review-item border-bottom pb-4 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="mb-0">Good but slightly overpriced</h5>
+                                    <div>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="far fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                                <div class="text-muted mb-2">Anjali P. - <small>2 March, 2025</small></div>
+                                <p>The t-shirt is definitely good quality and my daughter likes it. However, I think it's slightly overpriced for a basic kids t-shirt. That said, the material is nice and soft, and the stitching is solid.</p>
+                            </div>
+                            
+                            <!-- See more reviews -->
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark">Load More Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Products -->
+        <div class="related-products mt-5">
+            <h3 class="mb-4">You May Also Like</h3>
+            <div class="row">
+                <!-- Related Product 1 -->
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Related Product">
+                            <div class="product-actions position-absolute bottom-0 start-0 end-0 p-3 bg-white bg-opacity-75 d-flex justify-content-center">
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-muted small mb-1">Kids Clothing</p>
+                            <h5 class="card-title mb-1">Kids Polo T-shirt</h5>
+                            <div class="price-block">
+                                <span class="fw-bold">₹549</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 2 -->
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Related Product">
+                            <div class="product-actions position-absolute bottom-0 start-0 end-0 p-3 bg-white bg-opacity-75 d-flex justify-content-center">
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-muted small mb-1">Kids Clothing</p>
+                            <h5 class="card-title mb-1">Kids Printed Shorts</h5>
+                            <div class="price-block">
+                                <span class="fw-bold">₹349</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 3 -->
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">SALE</span>
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Related Product">
+                            <div class="product-actions position-absolute bottom-0 start-0 end-0 p-3 bg-white bg-opacity-75 d-flex justify-content-center">
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-muted small mb-1">Kids Clothing</p>
+                            <h5 class="card-title mb-1">Kids Casual Shirt</h5>
+                            <div class="price-block">
+                                <span class="text-decoration-line-through text-muted me-2">₹599</span>
+                                <span class="fw-bold">₹479</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 4 -->
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Related Product">
+                            <div class="product-actions position-absolute bottom-0 start-0 end-0 p-3 bg-white bg-opacity-75 d-flex justify-content-center">
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Quick view">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="btn btn-sm btn-outline-dark mx-1" data-bs-toggle="tooltip" title="Add to cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-muted small mb-1">Kids Clothing</p>
+                            <h5 class="card-title mb-1">Kids Hooded Sweatshirt</h5>
+                            <div class="price-block">
+                                <span class="fw-bold">₹799</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer - Copy from previous pages -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Prathamesh Readymade</h5>
+                    <p>Your one-stop solution for quality clothing and accessories for the entire family.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Kids Clothing</a></li>
+                        <li><a href="#" class="text-white">Mens Wear</a></li>
+                        <li><a href="#" class="text-white">Ladies Wear</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, City, State, India</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@prathameshreadymade.com</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Prathamesh Readymade and Hosiery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember-me">
+                            <label class="form-check-label" for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Create an Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="register-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="register-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="register-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="register-phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="register-password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="register-confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Service -->
+    <script src="js/api/apiService.js"></script>
+    <!-- Auth Service -->
+    <script src="js/auth.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/scripts.js"></script>
+    
+    <!-- Product Detail JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Thumbnail image click handler
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.querySelector('.main-image img');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Update main image
+                    mainImage.src = this.src.replace('150x150', '600x600');
+                    
+                    // Update active state
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Quantity buttons
+            const quantityInput = document.getElementById('quantity');
+            const decreaseBtn = document.getElementById('decrease-quantity');
+            const increaseBtn = document.getElementById('increase-quantity');
+            
+            decreaseBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                if (value > 1) {
+                    quantityInput.value = value - 1;
+                }
+            });
+            
+            increaseBtn.addEventListener('click', function() {
+                let value = parseInt(quantityInput.value);
+                quantityInput.value = value + 1;
+            });
+            
+            // Color selection
+            const colorOptions = document.querySelectorAll('.color-option');
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    colorOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Add to cart button
+            const addToCartBtn = document.getElementById('add-to-cart');
+            
+            addToCartBtn.addEventListener('click', function() {
+                // Get selected options
+                const size = document.querySelector('.btn-check:checked').id.replace('size-', '');
+                const color = document.querySelector('.color-option.active').style.backgroundColor;
+                const quantity = quantityInput.value;
+                
+                alert(`Added to cart: Size ${size.toUpperCase()}, Color ${color}, Quantity ${quantity}`);
+                
+                // Update cart count (for demo purposes)
+                const cartBadge = document.querySelector('.fa-shopping-cart + .badge');
+                if (cartBadge) {
+                    cartBadge.textContent = parseInt(cartBadge.textContent) + parseInt(quantity);
+                }
+            });
+            
+            // Add to wishlist button
+            const wishlistBtn = document.getElementById('add-to-wishlist');
+            
+            wishlistBtn.addEventListener('click', function() {
+                // Toggle heart icon
+                const heartIcon = this.querySelector('i');
+                heartIcon.classList.toggle('far');
+                heartIcon.classList.toggle('fas');
+                
+                // Update wishlist count (for demo purposes)
+                if (heartIcon.classList.contains('fas')) {
+                    const wishlistBadge = document.querySelector('.fa-heart + .badge');
+                    if (wishlistBadge) {
+                        wishlistBadge.textContent = parseInt(wishlistBadge.textContent) + 1;
+                    }
+                    alert('Added to wishlist!');
+                } else {
+                    const wishlistBadge = document.querySelector('.fa-heart + .badge');
+                    if (wishlistBadge && parseInt(wishlistBadge.textContent) > 0) {
+                        wishlistBadge.textContent = parseInt(wishlistBadge.textContent) - 1;
+                    }
+                    alert('Removed from wishlist!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

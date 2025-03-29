@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathamesh Readymade and Hosiery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">Prathamesh Readymade</a>
+            
+            <!-- Hamburger Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    
+                    <!-- Dropdown for Categories -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="products.html">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Socks</a></li>
+                            <li><a class="dropdown-item" href="#">Caps</a></li>
+                            <li><a class="dropdown-item" href="#">Inner Wear</a></li>
+                            <li><a class="dropdown-item" href="#">Leather Products</a></li>
+                            <li><a class="dropdown-item" href="#">Bags</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New Arrivals</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Form -->
+                <form class="d-flex mx-auto mb-2 mb-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search products..." aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- User Actions (Login, Wishlist, Cart) -->
+                <div class="user-actions d-flex align-items-center ms-lg-3">
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-user" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block me-3">
+                        <i class="fas fa-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </div>
+                    
+                    <div class="position-relative d-inline-block">
+                        <a href="cart.html" class="text-dark">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area - Hero Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-dark text-white">
+                    <img src="images/hero-img3.jpg" class="card-img" alt="Hero Image">
+                    <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <h2 class="card-title">Welcome to Prathamesh Readymade</h2>
+                        <p class="card-text">Your one-stop shop for quality clothing and accessories</p>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Categories Section -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Shop by Category</h2>
+        <div class="row">
+            <!-- Category Card 1 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/kids-clothing.jpg" class="card-img-top" alt="Kids Clothing">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kids Clothing</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Card 2 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/socks.jpg" class="card-img-top" alt="Socks">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Socks</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Card 3 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/caps.jpg" class="card-img-top" alt="Caps">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Caps</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Card 4 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/inner-wear.jpg" class="card-img-top" alt="Inner Wear">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Inner Wear</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Card 5 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/leather-product.jpg" class="card-img-top" alt="Leather Products">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Leather</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Card 6 -->
+            <div class="col-6 col-md-4 col-lg-2 mb-4">
+                <div class="card h-100">
+                    <img src="images/bags.jpg" class="card-img-top" alt="Bags">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bags</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <div class="container mt-5 featured-products">
+        <h2 class="mb-4">Featured Products</h2>
+        <div class="row">
+            <!-- Products will be loaded dynamically -->
+            <div class="col-12 text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Arrivals Section -->
+    <div class="container mt-5 new-arrivals">
+        <h2 class="mb-4">New Arrivals</h2>
+        <div class="row">
+            <!-- Products will be loaded dynamically -->
+            <div class="col-12 text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Prathamesh Readymade</h5>
+                    <p>Your one-stop solution for quality clothing and accessories for the entire family.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">New Arrivals</a></li>
+                        <li><a href="#" class="text-white">Kids Clothing</a></li>
+                        <li><a href="#" class="text-white">Mens Wear</a></li>
+                        <li><a href="#" class="text-white">Ladies Wear</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, City, State, India</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@prathameshreadymade.com</p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Prathamesh Readymade and Hosiery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember-me">
+                            <label class="form-check-label" for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Create an Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="register-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="register-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="register-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="register-phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="register-password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="register-confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Service -->
+    <script src="js/api/apiService.js"></script>
+    <!-- Auth Service -->
+    <script src="js/auth.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

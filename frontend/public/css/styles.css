@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6b6b !important;
+}
+
+.user-actions i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.user-actions i:hover {
+    color: #ff6b6b;
+}
+
+/* Card Styling */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #333;
+    border-color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991.98px) {
+    .user-actions {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+    
+    .user-actions i {
+        margin-right: 15px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Product Card Styling */
+.product-card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-actions {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+}
+
+/* Breadcrumb styles */
+.breadcrumb-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #ff6b6b;
+}
+
+/* Filter sidebar */
+.form-check-input:checked {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Product Detail Page Styles */
+.product-title {
+    font-weight: 600;
+}
+
+.thumbnail {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+    border: 2px solid #333;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-option:hover, .color-option.active {
+    transform: scale(1.1);
+    border: 2px solid #333;
+}
+
+/* Tab styles */
+.nav-tabs .nav-link {
+    color: #333;
+}
+
+.nav-tabs .nav-link.active {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Review styles */
+.review-item {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cart Page Styles */
+.quantity-input {
+    width: 40px;
+    text-align: center;
+}
+
+.remove-item, .save-for-later {
+    font-size: 0.9rem;
+}
+
+.payment-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Checkout Page Styles */
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.checkout-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    color: #6c757d;
+    z-index: 1;
+}
+
+.step-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.step.active .step-icon, .step.completed .step-icon {
+    background-color: #333;
+    color: white;
+}
+
+.step.active .step-text {
+    color: #333;
+    font-weight: 500;
+}
+
+.payment-method {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.payment-method.active {
+    border-color: #333;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.payment-icon i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
