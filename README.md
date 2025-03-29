@@ -26,6 +26,7 @@ A full-stack e-commerce website for a clothing and accessories store. This proje
 
 ## Project Structure
 
+<pre>
 prathamesh-store/
 ├── frontend/
 │   ├── public/
@@ -40,7 +41,7 @@ prathamesh-store/
 ├── models/
 ├── routes/
 └── server.js
-
+</pre>
 
 ## Installation and Setup
 
